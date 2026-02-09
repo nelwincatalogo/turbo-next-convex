@@ -7,6 +7,7 @@
     "click-events-have-key-events": "off",
     "prefer-tag-over-role": "off",
     "anchor-has-content": "off",
+    "exhaustive-deps": "off",
     "no-unused-vars": "error"
   }
 }
