@@ -18,7 +18,7 @@
   //   formatting
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "oxc.enable": true,
   "oxc.lint.run": "onType",
   "oxc.trace.server": "off",
@@ -111,10 +111,5 @@
     "**/.next/**",
     "**/.vscode/**"
   ],
-  "git-worktree-manager.worktreeCopyPatterns": [
-    ".env",
-    ".vscode/**",
-    "*.local",
-    ".env.local"
-  ]
+  "git-worktree-manager.worktreeCopyPatterns": [".env", ".vscode/**", "*.local", ".env.local"]
 }

@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "nextjs", "import", "jsx-a11y", "typescript"],
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "off",
+    "no-unused-vars": "error"
+  }
+}
