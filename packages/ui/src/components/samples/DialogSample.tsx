@@ -3,7 +3,6 @@
 import { Copy } from "lucide-react";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -13,9 +12,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "../ui-customs/dialog";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 
 export function DialogCloseButton() {
   // use this if you want to control the alert dialog programatically

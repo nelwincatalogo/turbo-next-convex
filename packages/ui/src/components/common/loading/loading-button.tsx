@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "../../../lib/utils";
 
 import Loading from ".";
+import { Button } from "../../ui/button";
 
 export function LoadingButton({
   className,

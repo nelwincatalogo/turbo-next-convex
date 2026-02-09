@@ -76,6 +76,10 @@
 }
 
 @theme inline {
+  /* fonts */
+  --font-sans: var(--font-geist-sans);
+
+  /* shadcn-ui */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

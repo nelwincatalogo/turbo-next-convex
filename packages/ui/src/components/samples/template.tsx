@@ -1,17 +1,17 @@
 "use client";
 
-import LoadingDots from "@/components/common/loading/loading-dots";
-import { AlertDialogDemo } from "@/components/samples/AlertDialogSample";
-import { DialogCloseButton } from "@/components/samples/DialogSample";
-import ReactAlertSample from "@/components/samples/ReactAlertSample";
-import { DrawerDialogDemo } from "@/components/samples/responsive-dialog";
-import { AdvancedDateRangePicker } from "@/components/ui-customs/advance-range-date-picker";
+import ReactAlertSample from "./ReactAlertSample";
+import { DrawerDialogDemo } from "./responsive-dialog";
 
 import Loading from "../common/loading";
 import { LoadingButton } from "../common/loading/loading-button";
+import LoadingDots from "../common/loading/loading-dots";
 import LoadingFull from "../common/loading/loading-full";
+import { AdvancedDateRangePicker } from "../ui-customs/advance-range-date-picker";
 import { Badge } from "../ui-customs/badge";
 import { ScrollArea } from "../ui/scroll-area";
+import { AlertDialogDemo } from "./AlertDialogSample";
+import { DialogCloseButton } from "./DialogSample";
 
 export default function Template() {
   return (
@@ -24,10 +24,6 @@ export default function Template() {
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Available Fonts</div>
         <div className="flex gap-4">
           <h1 className="text-center font-sans text-4xl font-bold text-green-500">Geist Font</h1>
-          <h1 className="font-inter text-center text-4xl font-bold text-amber-500">Inter Font</h1>
-          <h1 className="font-poppins text-center text-4xl font-bold text-blue-500">
-            Popppins Font
-          </h1>
         </div>
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Toast Example</div>
