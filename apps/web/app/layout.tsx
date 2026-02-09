@@ -1,3 +1,4 @@
+import UiProviders from "@repo/ui/ui-providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -23,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <UiProviders>{children}</UiProviders>
+      </body>
     </html>
   );
 }

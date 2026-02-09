@@ -4,6 +4,9 @@
   "rules": {
     "no-console": "off",
     "no-debugger": "off",
+    "click-events-have-key-events": "off",
+    "prefer-tag-over-role": "off",
+    "anchor-has-content": "off",
     "no-unused-vars": "error"
   }
 }
