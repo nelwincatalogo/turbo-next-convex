@@ -1,8 +1,5 @@
 "use client";
 
-import ReactAlertSample from "./ReactAlertSample";
-import { DrawerDialogDemo } from "./responsive-dialog";
-
 import Loading from "../common/loading";
 import { LoadingButton } from "../common/loading/loading-button";
 import LoadingDots from "../common/loading/loading-dots";
@@ -12,6 +9,8 @@ import { Badge } from "../ui-customs/badge";
 import { ScrollArea } from "../ui/scroll-area";
 import { AlertDialogDemo } from "./AlertDialogSample";
 import { DialogCloseButton } from "./DialogSample";
+import ReactAlertSample from "./ReactAlertSample";
+import { DrawerDialogDemo } from "./responsive-dialog";
 
 export default function Template() {
   return (

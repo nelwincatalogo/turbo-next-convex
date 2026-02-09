@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --port 3000",
     "build": "next build",
-    "start": "next start",
-    "lint:fix": "oxlint --fix .; oxfmt --write .; next typegen; tsc --noEmit"
+    "dev": "next dev --port 3000",
+    "lint:fix": "oxlint --fix .; oxfmt --write .; next typegen; tsc --noEmit",
+    "start": "next start"
   },
   "dependencies": {
     "@repo/ui": "*",

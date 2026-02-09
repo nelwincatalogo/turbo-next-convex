@@ -1,6 +1,8 @@
 import UiProviders from "@repo/ui/ui-providers";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
+
+import type { Metadata } from "next";
+
 import "./globals.css";
 
 const geistSans = localFont({

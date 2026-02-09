@@ -2,8 +2,8 @@
 
 import { ScrollAreaProps } from "@radix-ui/react-scroll-area";
 
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { cn } from "../../lib/utils";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 interface XScrollProps extends ScrollAreaProps {
   className?: string;
