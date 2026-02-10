@@ -34,6 +34,16 @@ yarn workspace web add date-fns
 yarn workspace @repo/ui add date-fns
 ```
 
+## Add new app
+
+copy the content of `apps/web` to `apps/docs` and change the name of the app in `turbo.json` and `package.json`
+
+OR
+
+```bash
+# apps/docs
+yarn create next-app docs --typescript
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
@@ -56,15 +66,19 @@ Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/do
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
 ```
+
 cd my-turborepo
 
 # With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
+
 turbo login
 
 # Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
+
 npx turbo login
 yarn exec turbo login
 pnpm exec turbo login
+
 ```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
@@ -72,13 +86,17 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
 ```
+
 # With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended)
+
 turbo link
 
 # Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
+
 npx turbo link
 yarn exec turbo link
 pnpm exec turbo link
+
 ```
 
 ## Useful Links
@@ -91,3 +109,4 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
 - [Configuration Options](https://turborepo.dev/docs/reference/configuration)
 - [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+```
