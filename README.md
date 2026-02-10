@@ -43,6 +43,7 @@ OR
 ```bash
 # apps/docs
 yarn create next-app docs --typescript
+```
 
 ## What's inside?
 
