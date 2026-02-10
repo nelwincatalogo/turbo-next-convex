@@ -5,7 +5,7 @@
 ## Use this template
 
 ```bash
-yarn dlx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex [project-name-here]
+npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex [project-name-here]
 ```
 
 ## Commands
@@ -110,4 +110,3 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
 - [Configuration Options](https://turborepo.dev/docs/reference/configuration)
 - [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
-```

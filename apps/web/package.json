@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3000",
-    "lint:fix": "oxlint --fix .; oxfmt --write .; next typegen; tsc --noEmit",
+    "lint:fix": "oxlint --fix . && oxfmt --write . && next typegen && tsc --noEmit",
     "start": "next start"
   },
   "dependencies": {
