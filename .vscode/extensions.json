@@ -20,8 +20,8 @@
 
     // formatting
     // "dbaeumer.vscode-eslint",
+    // "esbenp.prettier-vscode",
     "oxc.oxc-vscode",
-    "esbenp.prettier-vscode",
     "usernamehw.errorlens",
     "aaron-bond.better-comments",
     "Cardinal90.multi-cursor-case-preserve",
@@ -39,9 +39,9 @@
     // intellisense
     "christian-kohler.path-intellisense",
     "christian-kohler.npm-intellisense",
-    "codeandstuff.package-json-upgrade",
+    "codeandstuff.package-json-upgrade"
 
     // ai
-    "Augment.vscode-augment"
+    // "Augment.vscode-augment"
   ]
 }
