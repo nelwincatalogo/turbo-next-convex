@@ -8,6 +8,7 @@
     "prefer-tag-over-role": "off",
     "anchor-has-content": "off",
     "exhaustive-deps": "off",
+    "no-img-element": "off",
     "no-unused-vars": "error"
   }
 }
