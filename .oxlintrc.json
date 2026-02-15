@@ -9,6 +9,7 @@
     "anchor-has-content": "off",
     "exhaustive-deps": "off",
     "no-img-element": "off",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "typescript/no-explicit-any": "error"
   }
 }
