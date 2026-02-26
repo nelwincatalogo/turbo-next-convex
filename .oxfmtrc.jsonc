@@ -1,25 +1,24 @@
 {
-  "experimentalSortImports": {
+  "sortImports": {
     "groups": [
-      ["^node:", "value"], // Node.js built-ins
-      ["builtin", "value"],
-      ["external", "value"], // External dependencies
-      ["^@my-internal-scope/", "value"], // Your internal modules
-      ["^./", "^../", "value"], // Sibling and parent imports
+      ["value-builtin"], // Node.js built-ins
+      ["value-external"], // External dependencies
+      ["value-internal"], // Internal aliases
+      ["value-parent", "value-sibling", "value-index"], // Relative imports
       ["type"], // TypeScript type imports
     ],
-    "internalPattern": ["^@my-internal-scope/"],
+    "internalPattern": ["@repo/", "@/"],
     "ignoreCase": true,
     "newlinesBetween": true, // Set to true to add a newline between groups
     "order": "asc", // Sort alphabetically within groups
   },
-  "experimentalTailwindcss": {
+  "sortTailwindcss": {
     "stylesheet": "./packages/ui/src/styles/globals.css",
     "attributes": ["class", "className"],
     "functions": ["clsx", "cn"],
     "preserveWhitespace": true,
   },
-  "experimentalSortPackageJson": {
+  "sortPackageJson": {
     "sortScripts": true,
   },
 }

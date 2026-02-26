@@ -1,1 +1,9 @@
-yarn lint:fix
+staged_files="$(git diff --cached --name-only --diff-filter=ACMR)"
+
+yarn lint:fix || exit 1
+
+if [ -n "$staged_files" ]; then
+  printf '%s\n' "$staged_files" | while IFS= read -r file; do
+    [ -n "$file" ] && git add -- "$file"
+  done
+fi

@@ -1,9 +1,9 @@
-import { ConvexClientProvider } from "@/core/providers/convex-provider";
-import UiProviders from "@repo/ui/ui-providers";
 import localFont from "next/font/local";
 
-import type { Metadata } from "next";
+import { ConvexClientProvider } from "@/core/providers/convex-provider";
+import UiProviders from "@repo/ui/ui-providers";
 
+import type { Metadata } from "next";
 import "./globals.css";
 
 const geistSans = localFont({

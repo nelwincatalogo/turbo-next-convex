@@ -8,6 +8,8 @@
  * @module
  */
 
+import schema from "../schema.js";
+
 import type {
   DataModelFromSchemaDefinition,
   DocumentByName,
@@ -15,8 +17,6 @@ import type {
   SystemTableNames,
 } from "convex/server";
 import type { GenericId } from "convex/values";
-
-import schema from "../schema.js";
 
 /**
  * The names of all of your Convex tables.
