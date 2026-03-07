@@ -34,7 +34,7 @@ export function DrawerDialogDemo() {
         <DialogTrigger asChild>
           <Button variant="outline">Responsive Dialog</Button>
         </DialogTrigger>
-        <DialogContent className="font-sans sm:max-w-[425px]">
+        <DialogContent className="font-sans sm:max-w-106.25">
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>{`Make changes to your profile here. Click save when you're done.`}</DialogDescription>

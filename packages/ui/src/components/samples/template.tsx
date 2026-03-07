@@ -11,6 +11,12 @@ import { AlertDialogDemo } from "./AlertDialogSample";
 import { DialogCloseButton } from "./DialogSample";
 import ReactAlertSample from "./ReactAlertSample";
 import { DrawerDialogDemo } from "./responsive-dialog";
+import {
+  DataTableFilterToolbarSample,
+  DataTableMultiSelectFilterSample,
+  DataTableSample,
+  DataTableSearchHiddenTabsSample,
+} from "./table-sample/data-table";
 
 export default function Template() {
   return (
@@ -59,6 +65,34 @@ export default function Template() {
         </div>
 
         <LoadingFull className="mt-4" />
+
+        <div className="mt-8 rounded-full bg-gray-300 px-3 py-1 text-xs">
+          Data Table Sample (Dashboard-01)
+        </div>
+        <div className="w-full max-w-6xl">
+          <DataTableSample />
+        </div>
+
+        <div className="mt-8 rounded-full bg-gray-300 px-3 py-1 text-xs">
+          Data Table Sample (Search + Hidden Tabs)
+        </div>
+        <div className="w-full max-w-6xl">
+          <DataTableSearchHiddenTabsSample />
+        </div>
+
+        <div className="mt-8 rounded-full bg-gray-300 px-3 py-1 text-xs">
+          Data Table Sample (Toolbar Filter)
+        </div>
+        <div className="w-full max-w-6xl">
+          <DataTableFilterToolbarSample />
+        </div>
+
+        <div className="mt-8 rounded-full bg-gray-300 px-3 py-1 text-xs">
+          Data Table Sample (Toolbar Multi-Select Filter)
+        </div>
+        <div className="w-full max-w-6xl">
+          <DataTableMultiSelectFilterSample />
+        </div>
       </div>
     </ScrollArea>
   );
