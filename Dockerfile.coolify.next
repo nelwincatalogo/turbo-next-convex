@@ -1,0 +1,36 @@
+FROM node:20-alpine
+
+RUN apk add --no-cache libc6-compat
+RUN corepack enable && corepack prepare yarn@1.22.22 --activate
+
+WORKDIR /app
+
+ARG APP_NAME
+ARG NEXT_PUBLIC_CONVEX_URL
+ARG NEXT_PUBLIC_SITE_URL
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_PUBLIC_CONVEX_URL=${NEXT_PUBLIC_CONVEX_URL}
+ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
+
+# Fail fast if required build args are missing.
+RUN test -n "$APP_NAME"
+RUN test -n "$NEXT_PUBLIC_CONVEX_URL"
+RUN test -n "$NEXT_PUBLIC_SITE_URL"
+
+# Copy workspace manifests first for better layer caching.
+COPY package.json yarn.lock turbo.json ./
+COPY apps/web/package.json apps/web/package.json
+COPY packages/ui/package.json packages/ui/package.json
+COPY packages/typescript-config/package.json packages/typescript-config/package.json
+
+# Yarn v1 skips devDependencies when NODE_ENV=production, but the root build script
+# uses `turbo` from devDependencies during the image build.
+RUN yarn install --frozen-lockfile --production=false
+
+COPY . .
+
+RUN yarn build -F ${APP_NAME}
+
+EXPOSE 3000
