@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Install Portless
 
-Dev server is now running in portless. So make sure to install portless globally.
+Dev server is now running in portless. So make sure to install [portless](https://github.com/vercel-labs/portless) globally.
 
 ```bash
 npm install -g portless
