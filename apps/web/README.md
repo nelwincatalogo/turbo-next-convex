@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
 
+## Install Portless
+
+Dev server is now running in portless. So make sure to install portless globally.
+
+```bash
+npm install -g portless
+```
+
 ## Getting Started
 
 First, run the development server:
