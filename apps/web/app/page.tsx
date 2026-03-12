@@ -4,7 +4,7 @@ import Template from "@repo/ui/components/samples/template";
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div>
       <Template />
     </div>
   );

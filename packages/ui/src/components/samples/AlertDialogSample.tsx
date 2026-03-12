@@ -24,17 +24,18 @@ export function AlertDialogDemo() {
       <AlertDialogTrigger asChild>
         <Button variant="outline">Alert Dialog</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className="font-sans">
+      <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription>
+          <AlertDialogTitle className="mx-auto">Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription className="mx-auto text-center">
             This action cannot be undone. This will permanently delete your account and remove your
             data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+        <AlertDialogFooter className="flex justify-center!">
+          <AlertDialogCancel className="flex-1">Cancel</AlertDialogCancel>
           <AlertDialogAction
+            className="flex-1"
             onClick={() => {
               console.log("Continue Clicked");
             }}

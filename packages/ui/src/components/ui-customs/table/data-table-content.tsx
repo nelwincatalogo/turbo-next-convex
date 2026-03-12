@@ -113,7 +113,7 @@ export function DataTableContent<TData>({
   );
 
   return (
-    <div className="overflow-hidden rounded-lg border">
+    <div className="overflow-hidden rounded-none border">
       <XScroll>
         <DndContext
           collisionDetection={closestCenter}

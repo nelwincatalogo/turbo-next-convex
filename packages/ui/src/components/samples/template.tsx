@@ -5,7 +5,8 @@ import { LoadingButton } from "../common/loading/loading-button";
 import LoadingDots from "../common/loading/loading-dots";
 import LoadingFull from "../common/loading/loading-full";
 import { AdvancedDateRangePicker } from "../ui-customs/advance-range-date-picker";
-import { Badge } from "../ui-customs/badge";
+import { Badge as CustomBadge } from "../ui-customs/badge";
+import { Badge } from "../ui/badge";
 import { ScrollArea } from "../ui/scroll-area";
 import { AlertDialogDemo } from "./AlertDialogSample";
 import { DialogCloseButton } from "./DialogSample";
@@ -28,7 +29,8 @@ export default function Template() {
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Available Fonts</div>
         <div className="flex gap-4">
-          <h1 className="text-center font-sans text-4xl font-bold text-green-500">Geist Font</h1>
+          <h1 className="text-center font-sans text-4xl font-bold text-green-500">Geist</h1>
+          <h1 className="text-center font-mono text-4xl font-bold text-blue-500">Jetbrains Mono</h1>
         </div>
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Toast Example</div>
@@ -49,6 +51,16 @@ export default function Template() {
           <Badge variant="error">Error</Badge>
           <Badge variant="gray">Gray</Badge>
           <Badge variant="orange">Orange</Badge>
+        </div>
+
+        <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Custom Badge Example</div>
+        <div className="flex gap-4">
+          <CustomBadge variant="success">Success</CustomBadge>
+          <CustomBadge variant="warning">Warning</CustomBadge>
+          <CustomBadge variant="info">Info</CustomBadge>
+          <CustomBadge variant="error">Error</CustomBadge>
+          <CustomBadge variant="gray">Gray</CustomBadge>
+          <CustomBadge variant="orange">Orange</CustomBadge>
         </div>
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Advance Date Picker</div>

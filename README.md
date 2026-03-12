@@ -24,6 +24,10 @@ yarn build
 yarn lint:fix
 ```
 
+## Current Shadcn Theme
+
+https://ui.shadcn.com/create?preset=auHyAdu
+
 ## Add new package
 
 ```bash

@@ -3,6 +3,7 @@
 import { Copy } from "lucide-react";
 import { useState } from "react";
 
+import { Button } from "../ui/button";
 import {
   Dialog,
   DialogClose,
@@ -12,8 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../ui-customs/dialog";
-import { Button } from "../ui/button";
+} from "../ui/dialog";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
