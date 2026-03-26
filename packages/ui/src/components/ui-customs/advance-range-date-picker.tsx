@@ -133,8 +133,8 @@ export function AdvancedDateRangePicker({
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0 font-sans" align="start">
-          <div className="flex h-[300px] flex-col">
-            <ScrollArea className="min-h-[300px] flex-1">
+          <div className="flex h-75 flex-col">
+            <ScrollArea className="min-h-75 flex-1">
               <div className="flex">
                 <div className="w-32 space-y-1 border-r p-2">
                   {presets.map((preset) => (

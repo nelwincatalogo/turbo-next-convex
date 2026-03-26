@@ -4,9 +4,8 @@ import localFont from "next/font/local";
 
 import { ConvexClientProvider } from "@/core/providers/convex-provider";
 import UiProviders from "@repo/ui/ui-providers";
-
+import "@repo/ui/globals.css";
 import type { Metadata } from "next";
-import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,8 +40,8 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`scroll-smooth font-mono ${jetbrainsMono.variable}`}>
-        <body className={geistSans.variable}>
+      <html lang="en" className={`scroll-smooth ${geistSans.variable} ${jetbrainsMono.variable}`}>
+        <body>
           <ConvexClientProvider>
             <UiProviders>{children}</UiProviders>
           </ConvexClientProvider>

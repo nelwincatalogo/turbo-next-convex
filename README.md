@@ -26,7 +26,7 @@ yarn lint:fix
 
 ## Current Shadcn Theme
 
-https://ui.shadcn.com/create?preset=auHyAdu
+https://ui.shadcn.com/create?preset=bImeAgi
 
 ## Add new package
 

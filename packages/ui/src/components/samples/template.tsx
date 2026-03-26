@@ -45,12 +45,12 @@ export default function Template() {
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Badge Example</div>
         <div className="flex gap-4">
-          <Badge variant="success">Success</Badge>
-          <Badge variant="warning">Warning</Badge>
-          <Badge variant="info">Info</Badge>
-          <Badge variant="error">Error</Badge>
-          <Badge variant="gray">Gray</Badge>
-          <Badge variant="orange">Orange</Badge>
+          <Badge>Default</Badge>
+          <Badge variant="secondary">Secondary</Badge>
+          <Badge variant="outline">Outline</Badge>
+          <Badge variant="destructive">Destructive</Badge>
+          <Badge variant="ghost">Ghost</Badge>
+          <Badge variant="link">Link</Badge>
         </div>
 
         <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Custom Badge Example</div>
