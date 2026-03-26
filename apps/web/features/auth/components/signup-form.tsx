@@ -73,7 +73,6 @@ export function SignupForm({ className, ...props }: React.ComponentProps<"div">)
                       aria-invalid={!!errors.password}
                       {...form.register("password")}
                     />
-                    <FieldDescription>Must be at least 8 characters long.</FieldDescription>
                     <FieldError errors={[errors.password]} />
                   </Field>
 
@@ -89,6 +88,7 @@ export function SignupForm({ className, ...props }: React.ComponentProps<"div">)
                     <FieldError errors={[errors.confirmPassword]} />
                   </Field>
                 </div>
+                <FieldDescription>Must be at least 8 characters long.</FieldDescription>
               </Field>
 
               <Field>
