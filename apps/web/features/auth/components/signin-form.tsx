@@ -2,7 +2,6 @@
 
 import { Link } from "next-view-transitions";
 
-import { useLoginForm } from "@/features/auth/hooks/use-login-form";
 import { Button } from "@repo/ui/components/ui/button";
 import {
   Card,
@@ -23,8 +22,10 @@ import { Input } from "@repo/ui/components/ui/input";
 import { InputPassword } from "@repo/ui/components/ui/input-password";
 import { cn } from "@repo/ui/lib/utils";
 
-export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
-  const { form, onSubmit } = useLoginForm();
+import { useSigninForm } from "../hooks/use-signin-form";
+
+export function SigninForm({ className, ...props }: React.ComponentProps<"div">) {
+  const { form, onSubmit } = useSigninForm();
   const { errors, isSubmitting } = form.formState;
 
   return (
