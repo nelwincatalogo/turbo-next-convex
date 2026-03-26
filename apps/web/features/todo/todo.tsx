@@ -12,13 +12,13 @@ import { cn } from "@repo/ui/lib/utils";
 
 export default function Todo() {
   // Read data
-  const tasks = useQuery(api.tasks.list);
+  const tasks = useQuery(api.tasks.queries.list);
   console.log(tasks);
 
   // Write data
-  const createTask = useMutation(api.tasks.create);
-  const toggleTask = useMutation(api.tasks.toggle);
-  const deleteTask = useMutation(api.tasks.remove);
+  const createTask = useMutation(api.tasks.mutations.create);
+  const toggleTask = useMutation(api.tasks.mutations.toggle);
+  const deleteTask = useMutation(api.tasks.mutations.remove);
 
   // State for new task input
   const [newTaskText, setNewTaskText] = useState("");
@@ -47,7 +47,7 @@ export default function Todo() {
             placeholder="Add a new task..."
             value={newTaskText}
             onChange={(e) => setNewTaskText(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyUp={handleKeyPress}
             className="flex-1"
           />
           <Button onClick={handleAddTask} disabled={!newTaskText.trim()}>

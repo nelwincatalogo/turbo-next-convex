@@ -1,11 +1,7 @@
-import { defineSchema, defineTable } from "convex/server";
-import { v } from "convex/values";
+import { defineSchema } from "convex/server";
+
+import { tasks } from "./tasks/schema";
 
 export default defineSchema({
-  tasks: defineTable({
-    todo: v.string(),
-    completed: v.boolean(),
-    createdAt: v.number(), // Unix timestamp
-    updatedAt: v.number(),
-  }).index("by_completed", ["completed"]),
+  tasks,
 });

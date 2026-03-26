@@ -1,23 +1,6 @@
 import { v } from "convex/values";
 
-import { mutation, query } from "./_generated/server";
-
-export const list = query({
-  args: {},
-  handler: async (ctx) => {
-    return await ctx.db.query("tasks").collect();
-  },
-});
-
-export const getByCompleted = query({
-  args: { completed: v.boolean() },
-  handler: async (ctx, args) => {
-    return await ctx.db
-      .query("tasks")
-      .withIndex("by_completed", (q) => q.eq("completed", args.completed))
-      .collect();
-  },
-});
+import { mutation } from "../_generated/server";
 
 export const create = mutation({
   args: { todo: v.string() },
