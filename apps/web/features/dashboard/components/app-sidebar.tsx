@@ -1,5 +1,6 @@
 "use client";
 
+import { useQuery } from "convex/react";
 import {
   BookOpenIcon,
   BotIcon,
@@ -19,6 +20,7 @@ import { NavMain } from "@/features/dashboard/components/nav-main";
 import { NavProjects } from "@/features/dashboard/components/nav-projects";
 import { NavSecondary } from "@/features/dashboard/components/nav-secondary";
 import { NavUser } from "@/features/dashboard/components/nav-user";
+import { api } from "@repo/backend/convex/_generated/api";
 import {
   Sidebar,
   SidebarContent,
@@ -30,11 +32,6 @@ import {
 } from "@repo/ui/components/ui/sidebar";
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
       title: "Playground",
@@ -154,6 +151,13 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const viewer = useQuery(api.walletAuth.viewer);
+
+  const user = {
+    name: viewer?.displayName ?? "Wallet User",
+    walletAddress: viewer?.walletAddress ?? "Not connected",
+  };
+
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
@@ -179,7 +183,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={user} />
       </SidebarFooter>
     </Sidebar>
   );
