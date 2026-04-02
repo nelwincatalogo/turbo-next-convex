@@ -91,6 +91,10 @@ export function SignupForm({ className, ...props }: React.ComponentProps<"div">)
                 <FieldDescription>Must be at least 8 characters long.</FieldDescription>
               </Field>
 
+              <Field data-invalid={!!errors.root}>
+                <FieldError errors={[errors.root]} />
+              </Field>
+
               <Field>
                 <Button type="submit" disabled={isSubmitting}>
                   Create Account

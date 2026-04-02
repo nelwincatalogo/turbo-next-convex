@@ -97,6 +97,10 @@ export function SigninForm({ className, ...props }: React.ComponentProps<"div">)
                 <FieldError errors={[errors.password]} />
               </Field>
 
+              <Field data-invalid={!!errors.root}>
+                <FieldError errors={[errors.root]} />
+              </Field>
+
               <Field>
                 <Button type="submit" disabled={isSubmitting}>
                   Login
