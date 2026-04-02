@@ -2,17 +2,27 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+import { useEffect, useState } from "react";
 import { createConfig, createStorage, http, WagmiProvider } from "wagmi";
+import { mainnet } from "wagmi/chains";
 
 import { resolveWalletChains } from "@/core/config/chains";
 import { env } from "@/core/config/env";
 
 import type { ReactNode } from "react";
 import type { Chain } from "viem";
+import type { Config } from "wagmi";
 
-const chains = resolveWalletChains() as [Chain, ...Chain[]];
+// Minimal SSR-safe config: no connectors that access browser APIs (indexedDB, window, etc.)
+// Used during server render so wagmi hooks like useDisconnect don't throw.
+const ssrConfig = createConfig({
+  chains: [mainnet],
+  transports: { [mainnet.id]: http() },
+  ssr: true,
+});
 
 function createWalletConfig() {
+  const chains = resolveWalletChains() as [Chain, ...Chain[]];
   return createConfig({
     ...getDefaultConfig({
       appName: "Turbo Next Convex",
@@ -22,19 +32,21 @@ function createWalletConfig() {
       chains,
       transports: Object.fromEntries(chains.map((chain) => [chain.id, http()])),
     }),
-    storage: createStorage({
-      storage: typeof window !== "undefined" ? window.localStorage : undefined,
-    }),
+    storage: createStorage({ storage: window.localStorage }),
   });
 }
 
-const walletConfig = createWalletConfig();
-const walletQueryClient = new QueryClient();
-
 export function WalletProvider({ children }: { children: ReactNode }) {
+  const [config, setConfig] = useState<Config>(ssrConfig);
+  const [queryClient] = useState(() => new QueryClient());
+
+  useEffect(() => {
+    setConfig(createWalletConfig());
+  }, []);
+
   return (
-    <WagmiProvider config={walletConfig} reconnectOnMount>
-      <QueryClientProvider client={walletQueryClient}>
+    <WagmiProvider config={config} reconnectOnMount>
+      <QueryClientProvider client={queryClient}>
         <ConnectKitProvider>{children}</ConnectKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
