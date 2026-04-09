@@ -1,3 +1,4 @@
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { ViewTransitions } from "next-view-transitions";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
@@ -39,14 +40,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className={`scroll-smooth ${geistSans.variable} ${jetbrainsMono.variable}`}>
-        <body>
-          <ConvexClientProvider>
-            <UiProviders>{children}</UiProviders>
-          </ConvexClientProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <ConvexAuthNextjsServerProvider>
+      <ViewTransitions>
+        <html lang="en" className={`scroll-smooth ${geistSans.variable} ${jetbrainsMono.variable}`}>
+          <body>
+            <ConvexClientProvider>
+              <UiProviders>{children}</UiProviders>
+            </ConvexClientProvider>
+          </body>
+        </html>
+      </ViewTransitions>
+    </ConvexAuthNextjsServerProvider>
   );
 }
