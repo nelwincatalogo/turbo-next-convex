@@ -16,9 +16,9 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "oxfmt": "^0.35.0",
-    "oxlint": "^1.50.0",
-    "turbo": "^2.8.11",
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "turbo": "^2.9.9",
     "typescript": "5.9.2"
   },
   "engines": {
