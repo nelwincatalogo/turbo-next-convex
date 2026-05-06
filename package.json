@@ -11,12 +11,15 @@
     "lint:fix": "turbo run lint:fix",
     "prepare": "husky"
   },
+  "resolutions": {
+    "zod": "4.4.3"
+  },
   "devDependencies": {
     "husky": "^9.1.7",
-    "oxfmt": "^0.35.0",
-    "oxlint": "^1.50.0",
-    "turbo": "^2.8.11",
-    "typescript": "5.9.2"
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "turbo": "^2.9.9",
+    "typescript": "6.0.3"
   },
   "engines": {
     "node": ">=18"
