@@ -6,6 +6,9 @@ const envSchema = z.object({
   }),
 });
 
+// Helper to trim strings and convert empty values to undefined
+const _normalize = (value: string | undefined) => (value?.trim() ? value : undefined);
+
 // This will throw an error if validation fails
 const validateEnv = () => {
   const parsed = envSchema.safeParse({
