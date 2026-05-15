@@ -3,8 +3,9 @@ import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import { ConvexClientProvider } from "@/core/providers/convex-provider";
-import UiProviders from "@repo/ui/ui-providers";
+import { WalletProvider } from "@/core/providers/wallet-provider";
 import "@repo/ui/globals.css";
+import UiProviders from "@repo/ui/ui-providers";
 
 import type { Metadata } from "next";
 
@@ -12,7 +13,10 @@ const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
 });
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vercel.com"),
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -44,7 +48,9 @@ export default function RootLayout({
       <html lang="en" className={`scroll-smooth ${geistSans.variable} ${jetbrainsMono.variable}`}>
         <body>
           <ConvexClientProvider>
-            <UiProviders>{children}</UiProviders>
+            <WalletProvider>
+              <UiProviders>{children}</UiProviders>
+            </WalletProvider>
           </ConvexClientProvider>
         </body>
       </html>

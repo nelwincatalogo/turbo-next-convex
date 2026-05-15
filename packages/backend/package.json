@@ -9,6 +9,10 @@
     "lint:fix": "oxlint --fix convex && oxfmt --write convex && cd convex && tsc --noEmit"
   },
   "dependencies": {
-    "convex": "^1.37.0"
+    "@auth/core": "0.37.0",
+    "@convex-dev/auth": "^0.0.80",
+    "convex": "^1.37.0",
+    "ethers": "^6.15.0",
+    "siwe": "^3.0.0"
   }
 }

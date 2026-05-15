@@ -1,12 +1,5 @@
-"use client";
-
-import { AuthPageShell } from "@/features/auth/components/auth-page-shell";
-import { ForgotPasswordForm } from "@/features/auth/components/forgot-password-form";
+import { redirect } from "next/navigation";
 
 export default function ForgotPasswordPage() {
-  return (
-    <AuthPageShell>
-      <ForgotPasswordForm />
-    </AuthPageShell>
-  );
+  redirect("/sign-in");
 }
