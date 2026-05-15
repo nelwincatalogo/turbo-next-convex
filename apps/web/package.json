@@ -10,6 +10,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth/core": "0.37.0",
+    "@convex-dev/auth": "^0.0.80",
     "@hookform/resolvers": "^5.2.2",
     "@hookstate/core": "^4.0.2",
     "@hookstate/devtools": "^4.0.3",

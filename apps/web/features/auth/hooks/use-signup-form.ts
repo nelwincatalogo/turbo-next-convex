@@ -1,9 +1,12 @@
 "use client";
 
+import { useAuthActions } from "@convex-dev/auth/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTransitionRouter } from "next-view-transitions";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+
+import type { Resolver } from "react-hook-form";
 
 const signupFormSchema = z
   .object({
@@ -17,19 +20,38 @@ const signupFormSchema = z
     path: ["confirmPassword"],
   });
 
+const signupResolver = zodResolver(
+  signupFormSchema as unknown as Parameters<typeof zodResolver>[0],
+) as unknown as Resolver<SignupFormValues>;
+
 export type SignupFormValues = z.infer<typeof signupFormSchema>;
 
 export function useSignupForm() {
   const router = useTransitionRouter();
+  const { signIn } = useAuthActions();
   const form = useForm<SignupFormValues>({
-    resolver: zodResolver(signupFormSchema),
+    resolver: signupResolver,
     mode: "onChange",
   });
 
-  function onSubmit(_values: SignupFormValues) {
-    // TODO: Implement signup logic
-    console.log("Signup form submitted", _values);
-    router.push("/sign-in");
+  async function onSubmit(values: SignupFormValues) {
+    form.clearErrors("root");
+
+    const formData = new FormData();
+    formData.set("flow", "signUp");
+    formData.set("email", values.email);
+    formData.set("password", values.password);
+    formData.set("fullName", values.fullName);
+    formData.set("name", values.fullName);
+
+    try {
+      await signIn("password", formData);
+      router.push("/dashboard");
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Unable to sign up. Please try again.";
+      form.setError("root", { message });
+    }
   }
 
   return {
