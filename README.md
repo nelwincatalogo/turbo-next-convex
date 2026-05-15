@@ -8,6 +8,11 @@
 npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex [project-name-here]
 ```
 
+## for specific branch like `dev`
+```
+npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex/tree/dev [project-name-here]
+```
+
 ## Commands
 
 ```bash
