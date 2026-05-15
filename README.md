@@ -8,9 +8,14 @@
 npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex [project-name-here]
 ```
 
-## for specific branch like `dev`
+## With Convex Auth
 ```
-npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex/tree/dev [project-name-here]
+npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex/tree/with-password-auth [project-name-here]
+```
+
+## With Web3/Connect Wallet Auth
+```
+npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-convex/tree/with-web3-auth [project-name-here]
 ```
 
 ## Commands
