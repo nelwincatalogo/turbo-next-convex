@@ -7,13 +7,12 @@
   "editor.stickyScroll.enabled": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
 
   //   inlay hints
   "editor.inlayHints.enabled": "on",
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterNames.enabled": "all",
+  "js/ts.inlayHints.parameterNames.enabled": "all",
 
   //   formatting
   "editor.wordWrap": "on",
