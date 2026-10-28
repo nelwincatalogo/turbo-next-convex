@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "convex": "^1.43.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.9"
   }
 }

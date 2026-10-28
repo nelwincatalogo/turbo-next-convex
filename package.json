@@ -1,18 +1,11 @@
 {
   "name": "turbo-next-convex",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint:fix": "turbo run lint:fix",
     "prepare": "husky"
-  },
-  "resolutions": {
-    "zod": "4.4.3"
   },
   "devDependencies": {
     "husky": "^9.1.7",
@@ -24,5 +17,10 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "pnpm@10.26.0",
+  "pnpm": {
+    "overrides": {
+      "zod": "4.4.3"
+    }
+  }
 }

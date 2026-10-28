@@ -13,7 +13,8 @@
     "@hookform/resolvers": "^5.7.1",
     "@hookstate/core": "^4.0.2",
     "@hookstate/devtools": "^4.0.3",
-    "@repo/ui": "*",
+    "@repo/backend": "workspace:*",
+    "@repo/ui": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "convex": "^1.43.0",
@@ -36,7 +37,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
+    "@repo/typescript-config": "workspace:*",
     "@types/lodash.merge": "^4.6.9",
     "@types/node": "^25.6.0",
     "@types/react": "19.2.18",
