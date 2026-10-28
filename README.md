@@ -1,6 +1,6 @@
 # Turbo-Next-Convex Template
 
-### Package Manager: `yarn`
+### Package Manager: `pnpm`
 
 ## Use this template
 
@@ -22,16 +22,16 @@ npx create-turbo@latest --example https://github.com/nelwincatalogo/turbo-next-c
 
 ```bash
 # Run dev all apps
-yarn dev
+pnpm dev
 
 # Run apps/web only
-yarn dev -F web
+pnpm --filter web dev
 
 # Run build
-yarn build
+pnpm build
 
 # Check types, lint, and format
-yarn lint:fix
+pnpm lint:fix
 ```
 
 ## Current Shadcn Theme
@@ -42,10 +42,10 @@ https://ui.shadcn.com/create?preset=bImeAgi
 
 ```bash
 # apps/web
-yarn workspace web add date-fns
+pnpm --filter web add date-fns
 
 # packages/ui
-yarn workspace @repo/ui add date-fns
+pnpm --filter @repo/ui add date-fns
 ```
 
 ## Add new app
@@ -56,7 +56,7 @@ OR
 
 ```bash
 # apps/docs
-yarn create next-app docs --typescript
+pnpm create next-app docs --typescript
 ```
 
 ## What's inside?
@@ -91,10 +91,7 @@ turbo login
 # Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
 
 npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-
-```
+pnpm exec turbo login```
 
 This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
@@ -109,10 +106,7 @@ turbo link
 # Without [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation), use your package manager
 
 npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-
-```
+pnpm exec turbo link```
 
 ## Useful Links
 
