@@ -6,7 +6,10 @@ overrides:
   "zod": "4.4.3"
 
 allowBuilds:
+  bufferutil: true
   esbuild: true
+  keccak: true
+  utf-8-validate: true
 minimumReleaseAgeExclude:
   - baseline-browser-mapping@2.11.34
   - react-redux@9.3.1
