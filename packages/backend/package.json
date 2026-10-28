@@ -12,5 +12,8 @@
     "@auth/core": "0.41.3",
     "@convex-dev/auth": "^0.0.94",
     "convex": "^1.43.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.9"
   }
 }
